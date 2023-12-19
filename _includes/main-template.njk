@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{title}}</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <header class="header">
+        <h1 class="header__logo">Kovovýroba & zámečnictví</h1>
+        <nav class="menu">
+            <input type="checkbox" class="menu__checkbox" id="menu-checkbox">
+            <label for="menu-checkbox" class="menu__toggler">☰</label>
+            <ul class="menu__list">
+                <li class="menu__item {{ 'menu__item--active' if page.fileSlug === ''}}"><a href="/" class="menu__link">Úvod</a></li>
+                <li class="menu__item {{ 'menu__item--active' if page.fileSlug === 'services'}}"><a href="/services/" class="menu__link">Služby</a></li>
+                <li class="menu__item {{ 'menu__item--active' if page.fileSlug === 'equipment'}}"><a href="/equipment/" class="menu__link">Vybavení</a></li>
+                <li class="menu__item {{ 'menu__item--active' if page.fileSlug === 'photogallery'}}"><a href="/photogallery/" class="menu__link">Fotogalerie</a></li>
+                <li class="menu__item {{ 'menu__item--active' if page.fileSlug === 'contact'}}"><a href="/contact/" class="menu__link">Kontakt</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <main>
+        {{ content | safe}}
+    </main>
+
+    <footer class="footer">
+        <div class="footer__flexbox">
+            <div class="footer__services">
+                    <h3 class="footer__title">Naše služby</h3>
+                    <p class="footer__text">Svařování</p>
+                    <p class="footer__text">Pískování</p>
+                    <p class="footer__text">Lakování</p>
+                    <p class="footer__text">Dělení na pásové pile</p>
+                    <p class="footer__text">Řezání plazmovým hořákem</p>
+            </div> 
+
+            <div class="footer__contact">
+                <h3 class="footer__title">Kontakt</h3>
+                <p class="footer__text footer__text--bold">KOVOVÝROBA</p>
+                <p class="footer__text">Miloš Přibyl</p>
+                <p class="footer__text">Chyňava 240</p>
+                <p class="footer__text">267 07 Chyňava</p>
+                <p class="footer__text">IČ: 05487013</p>
+                <p class="footer__text">tel.: 724 072 542</p>
+                <p class="footer__text">e-mail: jmeno@domena.cz</p>
+            </div>     
+
+            <iframe class="footer__iframe"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2562.8649464073546!2d14.06484737623119!3d50.0326264173604!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470bb087c6530c69%3A0xb19b799a99ac570c!2sChy%C5%88ava%20240%2C%20267%2007%20Chy%C5%88ava!5e0!3m2!1scs!2scz!4v1702146356547!5m2!1scs!2scz"
+                width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+       
+        <p class="footer__copyright">© 2023, Kovovýroba & zámečnictví</p>
+
+    </footer>
+
+</body>
+
+</html>
+
+<!-- 
+co dodělat:
+funkčnost na mobilu
+gitignore
+napojeni na netlify
+formular nad patičku v kontaktech - prip. ho pridat i na jinou stranku
+GDPR
+udelat firemni mail - koupit domenu
+adresa dílny?
+zafixovane strany na telefonu
+dostylovat i na tablet
+nejsem si jista s názvama tříd pomocí BEM?
+icony odkaz
+v patičce odkazy na stranky
+dodelat stranky na sluzby
+vybrat správné fotky
+tlačirko button sjednotit v css
+-->
