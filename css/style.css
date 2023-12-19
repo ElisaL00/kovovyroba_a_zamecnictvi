@@ -306,6 +306,75 @@ body {
     }
 }
 
+/* Photogallery */
+
+.photogallery__title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+    font-weight: 500;
+    font-size: 20px;
+    text-align: center;
+
+}
+
+.photogallery__title::after {
+    content: "";
+    width: 60px;
+    height: 3px;
+    background-color: var(--main-color);
+    margin-top: 10px;
+}
+
+
+.photogallery {
+    display: grid;
+    gap: 10px;
+    margin: 20px;
+}
+
+.photogallery__src {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;   
+}
+
+/* photogallery min width 650px */
+
+@media screen and (min-width: 650px) {
+    .photogallery {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(7, 250px);
+    }
+}
+
+/* photogallery min width 800px */
+
+@media screen and (min-width: 800px) {
+    .photogallery__title {
+        align-items: flex-start;
+        font-size: 24px;
+        margin-left: 40px;
+        }
+
+    .photogallery__title::after {
+        width: 80px;
+    }
+
+    .photogallery {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(5, 250px);
+        margin: 40px;
+    }
+
+    .photogallery__photo:nth-child(5n) {
+        grid-column: span 2;
+        grid-row: span 2;
+    }
+}
+
+
 /* Contact */
 
 .contact {
